@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | NexaMart</title>
+  <meta name="description" content="NexaMart Privacy Policy">
+  <meta property="og:title" content="Privacy Policy | NexaMart">
+  <meta property="og:description" content="NexaMart Privacy Policy">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="header"></header>
+  
+  <main>
+
+<div class="container">
+  <div class="legal-content" style="max-width:800px;margin:40px auto;">
+    <h1>Privacy Policy</h1>
+    <section style="margin-top:20px;">
+      <h2>Information We Collect</h2>
+      <p>We may collect personal information such as your name, email address, phone number, and shipping address when you place an order or interact with our website.</p>
+    </section>
+    <section style="margin-top:20px;">
+      <h2>How We Use Your Information</h2>
+      <p>Your information is used to process orders, communicate with you about your order status, and improve our services. We do not sell your data to third parties.</p>
+    </section>
+    <section style="margin-top:20px;">
+      <h2>Data Sharing</h2>
+      <p>We may share your data with trusted third-party service providers (such as shipping partners) strictly for the purpose of fulfilling your order.</p>
+    </section>
+    <section style="margin-top:20px;">
+      <h2>Data Security</h2>
+      <p>We implement appropriate security measures to protect your personal information from unauthorized access or disclosure.</p>
+    </section>
+    <section style="margin-top:20px;">
+      <h2>Your Rights</h2>
+      <p>You have the right to access, update, or request deletion of your personal information at any time by contacting our support team.</p>
+    </section>
+    <section style="margin-top:20px;">
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us via our Contact page.</p>
+    </section>
+  </div>
+</div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer"></div>
+  <div id="cart-drawer-overlay" class="cart-drawer__overlay" onclick="toggleCartDrawer()"></div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal-overlay" onclick="closeQuickView()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu__overlay" onclick="closeMobileMenu()"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span style="font-size:20px;font-weight:700">NexaMart</span>
+      <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html">Categories</a>
+      <a href="sale.html">Sale</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>

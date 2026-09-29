@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Front cup angled -->
+    <ellipse cx="165" cy="225" rx="38" ry="55" fill="#EAEAEA"/>
+    <ellipse cx="165" cy="225" rx="20" ry="32"/>
+    <!-- Back cup angled higher -->
+    <ellipse cx="235" cy="180" rx="30" ry="46" fill="#EAEAEA"/>
+    <!-- Folded headband curve -->
+    <path d="M 165 170 C 165 115 220 110 235 135"/>
+    <circle cx="165" cy="170" r="6" fill="#999999" stroke="none"/>
+    <circle cx="235" cy="135" r="6" fill="#999999" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Glass Jar -->
+    <rect x="145" y="175" width="110" height="115" rx="14" fill="#EAEAEA"/>
+    <line x1="138" y1="175" x2="262" y2="175" stroke-width="8"/>
+    <!-- Wax line -->
+    <line x1="155" y1="205" x2="245" y2="205" stroke-width="4"/>
+    <!-- Wick -->
+    <line x1="200" y1="175" x2="200" y2="155" stroke-width="6"/>
+    <!-- Flame -->
+    <path d="M 200 115 C 215 138 215 152 200 156 C 185 152 185 138 200 115 Z" fill="#999999"/>
+    <!-- Label on jar -->
+    <rect x="170" y="225" width="60" height="40" rx="4" stroke-width="4"/>
+  </g>
+</svg>

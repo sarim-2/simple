@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Centered dropper bottle -->
+    <rect x="160" y="165" width="80" height="110" rx="14" fill="#EAEAEA"/>
+    <rect x="186" y="145" width="28" height="20" stroke-width="6"/>
+    <path d="M 188 145 C 188 122 212 122 212 145" fill="#999999"/>
+    <!-- Droplet icon inside bottle -->
+    <path d="M 200 200 C 190 216 190 228 200 234 C 210 228 210 216 200 200 Z" fill="#999999" stroke="none"/>
+    <line x1="175" y1="250" x2="225" y2="250" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Power bank body -->
+    <rect x="135" y="115" width="130" height="185" rx="22" fill="#EAEAEA"/>
+    <!-- Top port cuts -->
+    <rect x="155" y="105" width="30" height="10" rx="2" fill="#999999" stroke="none"/>
+    <rect x="205" y="105" width="30" height="10" rx="2" fill="#999999" stroke="none"/>
+    <!-- Lightning bolt icon -->
+    <path d="M 205 155 L 188 190 L 204 190 L 195 225 L 217 185 L 201 185 Z" fill="#999999" stroke="none"/>
+    <!-- Indicator dots -->
+    <circle cx="164" cy="260" r="4" fill="#999999" stroke="none"/>
+    <circle cx="188" cy="260" r="4" fill="#999999" stroke="none"/>
+    <circle cx="212" cy="260" r="4" fill="#999999" stroke="none"/>
+    <circle cx="236" cy="260" r="4" fill="#CCCCCC" stroke="none"/>
+  </g>
+</svg>

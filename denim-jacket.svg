@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Body -->
+    <path d="M 155 120 L 175 145 L 200 130 L 225 145 L 245 120 L 305 160 L 275 210 L 250 195 L 250 285 L 150 285 L 150 195 L 125 210 L 95 160 Z" fill="#EAEAEA"/>
+    <!-- Center placket -->
+    <line x1="200" y1="130" x2="200" y2="285" stroke-width="6"/>
+    <!-- Flap pockets -->
+    <rect x="160" y="180" width="30" height="24" rx="4" stroke-width="5"/>
+    <rect x="210" y="180" width="30" height="24" rx="4" stroke-width="5"/>
+    <!-- Buttons -->
+    <circle cx="200" cy="170" r="3" fill="#999999" stroke="none"/>
+    <circle cx="200" cy="210" r="3" fill="#999999" stroke="none"/>
+    <circle cx="200" cy="250" r="3" fill="#999999" stroke="none"/>
+  </g>
+</svg>

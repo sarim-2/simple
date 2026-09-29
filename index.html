@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaMart - Everything You Need | NexaMart</title>
+  <meta name="description" content="Discover everyday products at simple prices.">
+  <meta property="og:title" content="NexaMart - Everything You Need | NexaMart">
+  <meta property="og:description" content="Discover everyday products at simple prices.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="header"></header>
+  
+  <main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">Everything You Need.<br>All in One Place.</h1>
+        <p class="hero__subtitle">Discover everyday products at simple prices. Quality items delivered to your doorstep.</p>
+        <div class="hero__actions">
+          <a href="shop.html" class="btn btn--primary btn--lg">Shop Now</a>
+          <a href="shop.html" class="btn btn--secondary btn--lg">View Categories</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="assets/banners/hero-illustration.svg" alt="Shopping illustration" onerror="handleImageError(this)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories-section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Shop by Category</h2>
+      <a href="shop.html" class="section__link">View All →</a>
+    </div>
+    <div id="categories-grid" class="categories-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sale-section" style="background:var(--color-bg-secondary)">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">🔥 On Sale</h2>
+      <a href="sale.html" class="section__link">View All →</a>
+    </div>
+    <div id="sale-products" class="product-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="popular-section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Popular Products</h2>
+      <a href="shop.html?filter=popular" class="section__link">View All →</a>
+    </div>
+    <div id="popular-products" class="product-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="new-arrivals-section" style="background:var(--color-bg-secondary)">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">New Arrivals</h2>
+      <a href="new-arrivals.html" class="section__link">View All →</a>
+    </div>
+    <div id="new-arrivals-products" class="product-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to get notified about new products and exclusive offers.</p>
+    <form class="newsletter__form" onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');">
+      <input type="email" placeholder="Enter your email" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer"></div>
+  <div id="cart-drawer-overlay" class="cart-drawer__overlay" onclick="toggleCartDrawer()"></div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal-overlay" onclick="closeQuickView()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu__overlay" onclick="closeMobileMenu()"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span style="font-size:20px;font-weight:700">NexaMart</span>
+      <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html">Categories</a>
+      <a href="sale.html">Sale</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      const products = await fetchProducts();
+      if (!products.length) return;
+      
+      // Render categories
+      const categories = getCategories(products);
+      const catGrid = document.getElementById('categories-grid');
+      if (catGrid) {
+        // Category icons mapping
+        const categoryIcons = {
+          'Electronics': '⚡', 'Clothing': '👕', 'Gadgets': '🔧',
+          'Home & Living': '🏠', 'Accessories': '👜', 'Beauty': '✨',
+          'Sports': '⚽'
+        };
+        catGrid.innerHTML = categories.map(cat => `
+          <a href="category.html?category=${encodeURIComponent(cat.name)}" class="category-card">
+            <div class="category-card__icon" style="font-size:32px">${categoryIcons[cat.name] || '📦'}</div>
+            <div class="category-card__name">${cat.name}</div>
+            <div class="category-card__count">${cat.count} Products</div>
+          </a>
+        `).join('');
+      }
+      
+      // Render sale products (max 4)
+      const saleProducts = products.filter(p => p.sale);
+      const saleSection = document.getElementById('sale-section');
+      if (saleProducts.length === 0 && saleSection) saleSection.style.display = 'none';
+      else renderProductGrid('sale-products', saleProducts.slice(0, 4));
+      
+      // Render popular products (max 4)
+      const popularProducts = products.filter(p => p.popular);
+      const popSection = document.getElementById('popular-section');
+      if (popularProducts.length === 0 && popSection) popSection.style.display = 'none';
+      else renderProductGrid('popular-products', popularProducts.slice(0, 4));
+      
+      // Render new arrivals (max 4)
+      const newProducts = products.filter(p => p.new_arrival);
+      const newSection = document.getElementById('new-arrivals-section');
+      if (newProducts.length === 0 && newSection) newSection.style.display = 'none';
+      else renderProductGrid('new-arrivals-products', newProducts.slice(0, 4));
+    });
+  </script>
+</body>
+</html>

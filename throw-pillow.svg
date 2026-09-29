@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Plump pillow shape -->
+    <path d="M 130 130 C 170 145 230 145 270 130 C 255 170 255 230 270 270 C 230 255 170 255 130 270 C 145 230 145 170 130 130 Z" fill="#EAEAEA"/>
+    <!-- Center tuft / button -->
+    <circle cx="200" cy="200" r="6" fill="#999999"/>
+    <path d="M 186 186 L 214 214 M 214 186 L 186 214" stroke-width="4"/>
+  </g>
+</svg>

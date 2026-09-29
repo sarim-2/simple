@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Shirt outline -->
+    <path d="M 160 125 C 175 140 225 140 240 125 L 295 160 L 265 205 L 242 195 L 242 285 L 158 285 L 158 195 L 135 205 L 105 160 Z" fill="#EAEAEA"/>
+    <!-- Collar scoop seam -->
+    <path d="M 160 125 C 175 140 225 140 240 125" stroke-width="8"/>
+    <!-- Bottom hem -->
+    <line x1="158" y1="272" x2="242" y2="272" stroke-width="4"/>
+  </g>
+</svg>

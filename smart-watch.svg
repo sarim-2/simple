@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Straps -->
+    <path d="M 160 135 L 160 80 L 240 80 L 240 135"/>
+    <path d="M 160 265 L 160 320 L 240 320 L 240 265"/>
+    <!-- Case -->
+    <rect x="140" y="135" width="120" height="130" rx="30" fill="#EAEAEA"/>
+    <!-- Crown -->
+    <rect x="260" y="185" width="8" height="26" rx="4" fill="#999999"/>
+    <!-- Screen display ring & hands -->
+    <circle cx="200" cy="200" r="38" stroke-width="4" stroke-dasharray="6 6"/>
+    <path d="M 200 200 L 200 180" stroke-width="6"/>
+    <path d="M 200 200 L 216 200" stroke-width="6"/>
+  </g>
+</svg>

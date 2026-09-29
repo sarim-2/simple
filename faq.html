@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | NexaMart</title>
+  <meta name="description" content="Frequently Asked Questions">
+  <meta property="og:title" content="FAQ | NexaMart">
+  <meta property="og:description" content="Frequently Asked Questions">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="header"></header>
+  
+  <main>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Frequently Asked Questions</h1>
+  </div>
+  <div class="faq-list" style="max-width:800px;margin:0 auto 60px;">
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">1. How do I place an order?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">Simply browse our products, add them to your cart, and proceed to checkout. Your order will be sent to us via WhatsApp for confirmation.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">2. What payment methods are available?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">We accept Cash on Delivery (COD) and bank transfers. Payment details will be discussed during order confirmation.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">3. Do you offer Cash on Delivery?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">Yes, Cash on Delivery is available for all regions we deliver to.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">4. How long does delivery take?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">Standard delivery usually takes 3-5 business days depending on your location.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">5. Can I cancel an order?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">Yes, you can cancel your order by replying to the WhatsApp confirmation message before the order is dispatched.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">6. How can I contact support?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">You can contact us via the Contact Us page, or simply message us on WhatsApp using the button on our site.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">7. Is there free delivery?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">We occasionally run promotions offering free delivery. Check our banners or subscribe to our newsletter for updates.</div>
+    </div>
+    <div class="faq-item" style="border:1px solid #ddd;border-radius:4px;margin-bottom:10px;overflow:hidden;" onclick="this.classList.toggle('active')">
+      <div class="faq-item__question" style="padding:15px;background:#f9f9f9;cursor:pointer;font-weight:600;">8. How do I track my order?</div>
+      <div class="faq-item__answer" style="padding:15px;display:none;background:#fff;">Once dispatched, we will send you a tracking link via WhatsApp.</div>
+    </div>
+  </div>
+  <style>
+    .faq-item.active .faq-item__answer { display: block !important; }
+    .faq-item.active .faq-item__question { background: #eee !important; }
+  </style>
+</div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer"></div>
+  <div id="cart-drawer-overlay" class="cart-drawer__overlay" onclick="toggleCartDrawer()"></div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal-overlay" onclick="closeQuickView()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu__overlay" onclick="closeMobileMenu()"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span style="font-size:20px;font-weight:700">NexaMart</span>
+      <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html">Categories</a>
+      <a href="sale.html">Sale</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>

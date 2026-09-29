@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Front rim profile -->
+    <ellipse cx="140" cy="200" rx="14" ry="40" fill="#EAEAEA"/>
+    <ellipse cx="140" cy="200" rx="8" ry="26"/>
+    <!-- Folded temples -->
+    <path d="M 140 180 L 270 180 C 285 180 290 192 290 205" stroke-width="8"/>
+    <path d="M 140 194 L 265 194 C 278 194 282 202 282 215" stroke-width="6"/>
+  </g>
+</svg>

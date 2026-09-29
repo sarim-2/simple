@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Headband arc -->
+    <path d="M 125 210 C 125 125 275 125 275 210" stroke-width="10"/>
+    <path d="M 145 145 C 175 132 225 132 255 145" stroke-width="6"/>
+    <!-- Earcups -->
+    <rect x="105" y="195" width="40" height="75" rx="20" fill="#EAEAEA"/>
+    <rect x="255" y="195" width="40" height="75" rx="20" fill="#EAEAEA"/>
+    <!-- Cushion lines -->
+    <line x1="130" y1="210" x2="130" y2="255" stroke-width="4"/>
+    <line x1="270" y1="210" x2="270" y2="255" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FBFBFB"/>
+  
+  <!-- Subtle ambient circular backdrops -->
+  <circle cx="300" cy="200" r="145" fill="#F5F5F5"/>
+  <circle cx="380" cy="140" r="45" fill="#E5E5E5" opacity="0.5"/>
+  
+  <!-- Ground shadow -->
+  <ellipse cx="300" cy="340" rx="140" ry="14" fill="#E5E5E5"/>
+  
+  <!-- Items inside bag (back layer) -->
+  <!-- Sleek device / tablet -->
+  <rect x="230" y="110" width="95" height="150" rx="12" fill="#EAEAEA" stroke="#111111" stroke-width="5" transform="rotate(-12 277 185)"/>
+  <rect x="240" y="125" width="75" height="120" rx="6" fill="#FAFAFA" transform="rotate(-12 277 185)"/>
+  <!-- Device accent element -->
+  <circle cx="282" cy="145" r="8" fill="#2563EB" opacity="0.9"/>
+  
+  <!-- Minimalist cosmetic tube / bottle -->
+  <rect x="315" y="125" width="45" height="120" rx="8" fill="#F5F5F5" stroke="#111111" stroke-width="5" transform="rotate(10 337 185)"/>
+  <rect x="325" y="105" width="25" height="20" rx="4" fill="#111111" transform="rotate(10 337 185)"/>
+  <line x1="322" y1="165" x2="350" y2="170" stroke="#2563EB" stroke-width="4"/>
+
+  <!-- Shopping Tote Bag (Front) -->
+  <g>
+    <!-- Bag Handles -->
+    <path d="M 255 190 C 255 130 345 130 345 190" fill="none" stroke="#111111" stroke-width="7" stroke-linecap="round"/>
+    
+    <!-- Bag Main Body -->
+    <path d="M 215 190 L 385 190 L 370 330 L 230 330 Z" fill="#111111"/>
+    
+    <!-- Bag fold accent / crease -->
+    <path d="M 230 330 L 255 190" stroke="#2D2D2D" stroke-width="2"/>
+    <path d="M 370 330 L 345 190" stroke="#2D2D2D" stroke-width="2"/>
+
+    <!-- NexaMart Minimalist Logo Emblem on Bag -->
+    <circle cx="300" cy="255" r="22" fill="#2563EB"/>
+    <path d="M 292 263 L 292 247 L 308 263 L 308 247" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Floating minimalist accents -->
+  <!-- Sparkle 1 -->
+  <path d="M 180 160 Q 180 175 165 175 Q 180 175 180 190 Q 180 175 195 175 Q 180 175 180 160 Z" fill="#2563EB"/>
+  
+  <!-- Sparkle 2 -->
+  <path d="M 425 210 Q 425 220 415 220 Q 425 220 425 230 Q 425 220 435 220 Q 425 220 425 210 Z" fill="#111111"/>
+  
+  <!-- Minimalist percentage / discount tag -->
+  <g transform="translate(390, 140) rotate(15)">
+    <rect width="48" height="28" rx="6" fill="#F5F5F5" stroke="#111111" stroke-width="3"/>
+    <circle cx="12" cy="14" r="3" fill="#111111"/>
+    <line x1="22" y1="20" x2="36" y2="8" stroke="#111111" stroke-width="2.5"/>
+    <circle cx="25" cy="10" r="2" fill="#2563EB"/>
+    <circle cx="33" cy="18" r="2" fill="#2563EB"/>
+  </g>
+</svg>

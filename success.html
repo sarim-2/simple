@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | NexaMart</title>
+  <meta name="description" content="Order successful">
+  <meta property="og:title" content="Order Confirmed | NexaMart">
+  <meta property="og:description" content="Order successful">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="header"></header>
+  
+  <main>
+
+<div class="container">
+  <div class="success-page">
+    <div class="success-page__icon">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h1>Order Request Created!</h1>
+    <p>Your order details have been prepared for WhatsApp. The store will confirm your order shortly.</p>
+    <p style="color:var(--color-text-muted);font-size:14px;margin-bottom:24px">Please note: Your order is not officially confirmed until the store responds on WhatsApp.</p>
+    <a href="index.html" class="btn btn--primary btn--lg">Continue Shopping</a>
+  </div>
+</div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer"></div>
+  <div id="cart-drawer-overlay" class="cart-drawer__overlay" onclick="toggleCartDrawer()"></div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal-overlay" onclick="closeQuickView()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu__overlay" onclick="closeMobileMenu()"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span style="font-size:20px;font-weight:700">NexaMart</span>
+      <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html">Categories</a>
+      <a href="sale.html">Sale</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>

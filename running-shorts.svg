@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Shorts outline -->
+    <path d="M 140 135 L 260 135 L 275 245 L 215 245 L 200 195 L 185 245 L 125 245 Z" fill="#EAEAEA"/>
+    <!-- Waistband -->
+    <line x1="140" y1="155" x2="260" y2="155" stroke-width="6"/>
+    <!-- Drawstring -->
+    <path d="M 196 155 C 190 175 185 185 180 185" stroke-width="4"/>
+    <path d="M 204 155 C 210 175 215 185 220 185" stroke-width="4"/>
+    <!-- Side slit curves -->
+    <path d="M 130 245 C 140 230 145 245 155 245" stroke-width="4"/>
+    <path d="M 270 245 C 260 230 255 245 245 245" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | NexaMart</title>
+  <meta name="description" content="About NexaMart">
+  <meta property="og:title" content="About Us | NexaMart">
+  <meta property="og:description" content="About NexaMart">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="header"></header>
+  
+  <main>
+
+<div class="container">
+  <div class="page-header">
+    <h1>About Us</h1>
+  </div>
+  <section class="section">
+    <h2>Who We Are</h2>
+    <p>Welcome to NexaMart, your number one source for everyday products. We're dedicated to providing you the very best of items, with an emphasis on quality, customer service, and uniqueness.</p>
+  </section>
+  <section class="section">
+    <h2>Why Shop With Us</h2>
+    <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
+      <div class="card" style="padding:20px;border:1px solid #ddd;border-radius:8px;">
+        <h3>Quality Products</h3>
+        <p>We source only the finest quality items for our customers.</p>
+      </div>
+      <div class="card" style="padding:20px;border:1px solid #ddd;border-radius:8px;">
+        <h3>Fast Delivery</h3>
+        <p>Your orders reach you in record time, safely and securely.</p>
+      </div>
+      <div class="card" style="padding:20px;border:1px solid #ddd;border-radius:8px;">
+        <h3>Customer Support</h3>
+        <p>Our team is available round the clock to help you with queries.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>What We Offer</h2>
+    <p>We offer a wide range of products including electronics, clothing, and home accessories. Our goal is to make shopping easy and accessible to everyone.</p>
+  </section>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="contact.html" class="btn btn--primary">Contact Us</a>
+  </div>
+</div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer"></div>
+  <div id="cart-drawer-overlay" class="cart-drawer__overlay" onclick="toggleCartDrawer()"></div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal-overlay" onclick="closeQuickView()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu__overlay" onclick="closeMobileMenu()"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span style="font-size:20px;font-weight:700">NexaMart</span>
+      <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html">Categories</a>
+      <a href="sale.html">Sale</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <g stroke="#999999" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Open clamshell halves -->
+    <rect x="125" y="135" width="70" height="145" rx="12" fill="#EAEAEA"/>
+    <rect x="205" y="135" width="70" height="145" rx="12" fill="#EAEAEA"/>
+    <!-- Left mesh compartments -->
+    <line x1="135" y1="180" x2="185" y2="180" stroke-width="4"/>
+    <line x1="135" y1="225" x2="185" y2="225" stroke-width="4"/>
+    <!-- Right luggage straps -->
+    <line x1="215" y1="160" x2="265" y2="255" stroke-width="5"/>
+    <line x1="265" y1="160" x2="215" y2="255" stroke-width="5"/>
+    <!-- Top handles -->
+    <path d="M 145 135 C 145 118 175 118 175 135" stroke-width="5"/>
+    <path d="M 225 135 C 225 118 255 118 255 135" stroke-width="5"/>
+  </g>
+</svg>

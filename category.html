@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category | NexaMart</title>
+  <meta name="description" content="Shop by Category">
+  <meta property="og:title" content="Category | NexaMart">
+  <meta property="og:description" content="Shop by Category">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header id="header"></header>
+  
+  <main>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb__separator">›</span>
+    <span id="breadcrumb-category">Category</span>
+  </div>
+  <div class="page-header">
+    <h1 id="category-title">Category</h1>
+    <p id="category-count"></p>
+  </div>
+  <div id="category-products" class="product-grid" style="padding:32px 0"></div>
+  <div id="category-pagination" class="pagination"></div>
+</div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer"></div>
+  <div id="cart-drawer-overlay" class="cart-drawer__overlay" onclick="toggleCartDrawer()"></div>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal-overlay" onclick="closeQuickView()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeQuickView()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu__overlay" onclick="closeMobileMenu()"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__header">
+      <span style="font-size:20px;font-weight:700">NexaMart</span>
+      <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html">Categories</a>
+      <a href="sale.html">Sale</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    let catPage = 1;
+    document.addEventListener('DOMContentLoaded', async function() {
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category');
+      if (!category) {
+        document.getElementById('category-products').innerHTML = '<div class="empty-state"><h2>No category selected</h2><p>Please select a category.</p><a href="shop.html" class="btn btn--primary">Go to Shop</a></div>';
+        return;
+      }
+      document.getElementById('category-title').textContent = category;
+      document.getElementById('breadcrumb-category').textContent = category;
+      document.title = category + ' | NexaMart';
+      
+      const products = await fetchProducts();
+      const catProducts = products.filter(p => p.category === category);
+      document.getElementById('category-count').textContent = catProducts.length + ' products';
+      
+      function renderCatPage() {
+        const { items, totalPages } = paginateProducts(catProducts, catPage, CONFIG.PRODUCTS_PER_PAGE);
+        renderProductGrid('category-products', items);
+        if (catProducts.length === 0) {
+          document.getElementById('category-products').innerHTML = '<div class="empty-state"><h2>No products in this category</h2><a href="shop.html" class="btn btn--primary">Browse All Products</a></div>';
+        }
+        renderPagination('category-pagination', catPage, totalPages, (page) => {
+          catPage = page;
+          renderCatPage();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      renderCatPage();
+    });
+  </script>
+</body>
+</html>
